@@ -41,7 +41,7 @@ osc.select.w.all(glyco.w.out, c(2,3,4))
 #All
 osc.select.w.all(glyco.w.out)
 
-All the datas are publicly available and comes from KEGG, NCBI, PaXDB.
+#All the datas are publicly available and comes from KEGG, NCBI, PaXDB.
 ########################################################################
 
 
