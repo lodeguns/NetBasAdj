@@ -1,9 +1,7 @@
 ########################################################################
-#  Multi Omic Oscillations Networks
+#  Stub
 #
-#  Network Based Adjacency (NBA)  - Example of Use
 #
-#  Francesco Bardozzo, Pietro Liò, Roberto Tagliaferri
 #
 ########################################################################
 #Load DataSet
@@ -36,8 +34,12 @@ glyco.w.in  <- osc.get.list.w(osc.paths.list[1], oscill.org, "in")
 osc.select.w.all(glyco.w.in)
 
 glyco.w.out <- osc.get.list.w(osc.paths.list[1], oscill.org, "out")
-osc.select.w.all(glyco.w.out)
 
+#Selected Adj.s
+osc.select.w.all(glyco.w.out, c(2,3,4))
+
+#All
+osc.select.w.all(glyco.w.out)
 
 All the datas are publicly available and comes from KEGG, NCBI, PaXDB.
 ########################################################################
