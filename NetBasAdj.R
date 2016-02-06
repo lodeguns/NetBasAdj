@@ -162,7 +162,7 @@ getWeightsHOSC<-function(toyGraph, locseq, org, h, dd, tabellafordtx, inout="out
         pr = paste("Genes on an ordered sequence near of positions n = ", 
                    h-1 ," and on the network near of ", dd-1, " edges.", sep =" ")
         pr = paste(pr, " indexes: ", i, " e ", h-1, sep=" ")
-        #print(pr)
+        print(pr)
         #print(V(graphIG)[res0$vpath[[k]]]$name)
         
         
