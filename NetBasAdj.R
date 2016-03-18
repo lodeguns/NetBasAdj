@@ -1,6 +1,6 @@
 
 #########################################################################################
-#  Multi Omic Oscillations Networks
+#  Novel algorithms to detect oscillatory patterns in multi omic metabolic networks.
 #
 #  Network Based Adjacency (NBA)  - Fun. Extraction
 #
