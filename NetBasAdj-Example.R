@@ -1,9 +1,12 @@
-########################################################################
-#  Stub
+#########################################################################################
+#  Novel algorithms to detect oscillatory patterns in multi omic metabolic networks.
 #
+#  Network Based Adjacency (NBA)  - Fun. Extraction
 #
+#  Francesco Bardozzo, Pietro Liò, Roberto Tagliaferri
 #
-########################################################################
+#########################################################################################
+
 #Load DataSet
 #https://github.com/lodeguns/NetBasAdj/blob/master/osc.paths.list.RData
 
