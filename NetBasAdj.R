@@ -36,15 +36,22 @@ getWeightsHOSC<-function(DG_k, locseq, org, d_NBA, psi, tabellafordtx, inout="ou
     fromOsc <- paste(org, as.character(locseq[i]), sep=":")
     toOsc <- paste(org, as.character(locseq[i+(d_NBA-1)]), sep=":")
     
-    res0 <- get.shortest.paths(graphIG, from=fromOsc , to=toOsc, #graphIG, v=V(graphIG), to=V(graphIG),
-                               mode = inout, 
-                               weights = NULL, 
-                               output=c("vpath"),
-                               predecessors = TRUE,  #potrebbero servirmi.
-                               inbound.edges = TRUE) 
+    print(paste("", fromOsc, " ", toOsc))
+    
+    res0=NULL
+    tryCatch( res0 <- res0 <-get.shortest.paths(graphIG, fromOsc, toOsc, mode = c(inout), weights = NULL, output=c("vpath", "epath", "both"),
+                                                     predecessors = FALSE, inbound.edges = FALSE) ,
+              warning = function(w) {print(paste("warning "));},
+              error   = function(e) {print(paste("error ")); NaN}
+              )
+    
+    
+
+    
     #Vertex Sequence
     #vpath means that the vertices along the paths are reported.
     #
+    if(length(res0)!=0){
     for( k in 1:length(res0$vpath)){
       
       if(length(V(graphIG)[res0$vpath[[k]]]$name)==psi){
@@ -70,11 +77,11 @@ getWeightsHOSC<-function(DG_k, locseq, org, d_NBA, psi, tabellafordtx, inout="ou
     }
     
     
+    } 
     
     
-    
-  }
   
+  }
   
   return(count)
   
